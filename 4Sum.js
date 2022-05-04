@@ -40,17 +40,17 @@ var fourSum = function(nums, target) {
         }
         // ensure that first p4 moves to the end of the array and then p3
 
-        if (p4 < nums.length - 1) p4++
+        if (p4 < nums.length - 1) {
+            p4++
+            // if (nums[p4] === nums[p4 - 1]) p4++
+        }
         else if (p3 < nums.length - 2) p3++;
         else if (p2 < nums.length - 3) p2++;
         else p1++;
-
     }
-    
 
     // return output
     return output;
-
 
 };
 
@@ -58,4 +58,6 @@ var fourSum = function(nums, target) {
 fourSum(nums, 0) //?
 
 
-fourSum([2,1,2,1,2], 6) //?
+fourSum([2,2,2,2,2], 8) //?
+
+fourSum([-2,-1,-1,1,1,2,2], 0) //?
