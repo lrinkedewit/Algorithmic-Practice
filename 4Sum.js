@@ -42,7 +42,7 @@ var fourSum = function(nums, target) {
 
         if (p4 < nums.length - 1) {
             p4++
-            // if (nums[p4] === nums[p4 - 1]) p4++
+            while(nums[p4] === nums[p4 + 1]) p4++
         }
         else if (p3 < nums.length - 2) p3++;
         else if (p2 < nums.length - 3) p2++;
