@@ -23,7 +23,6 @@ var findDisappearedNumbers = function(nums) {
     const recurse = (counter = 1) => {
         // base case = counter === nums.length
         if (counter > nums.length) return;
-        counter //? 
         // if counter does not exist in set, push it to output array
         if (!set.has(counter)) output.push(counter)
         recurse(counter += 1)
@@ -38,4 +37,8 @@ var findDisappearedNumbers = function(nums) {
 };
 
 findDisappearedNumbers([4,3,2,7,8,2,3,1])
-findDisappearedNumbers([1,1]) //?
+// findDisappearedNumbers([1,1]) //?
+
+
+const set = new Set()
+set.add([1,2,3,4,5])//? 
